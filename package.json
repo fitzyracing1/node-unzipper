@@ -58,5 +58,16 @@
   "main": "unzip.js",
   "scripts": {
     "test": "npx tap test/*.js --coverage-report=html --lines=90 --functions=85 --statements=90 --branches=80 --reporter=dot"
+  },
+  "_patchCloud": {
+    "fork": "https://github.com/fitzyracing1/node-unzipper",
+    "branch": "patch-cloud",
+    "upstream": "https://github.com/ZJONSSON/node-unzipper",
+    "upstreamPr": "https://github.com/ZJONSSON/node-unzipper/pull/331",
+    "upstreamIssue": "https://github.com/ZJONSSON/node-unzipper/issues/330",
+    "baseRef": "aaf77f0 (unzipper@0.12.5 release commit)",
+    "upstreamVersion": "0.12.5",
+    "fix": "Move @aws-sdk/client-s3 from devDependencies to dependencies so Open.s3_v3 (and bundlers that statically resolve lib/Open/index.js) can find it after a normal install.",
+    "details": "See PATCH-CLOUD.md in this package."
   }
 }
